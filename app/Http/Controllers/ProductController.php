@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -23,4 +24,9 @@ class ProductController extends Controller
         $product->create($data); //создаем новую запись в БД
         return redirect()->back();
     }
+
+    public function show(Product $product){
+        return view('products.show', compact('product'));
+    }
+
 }
