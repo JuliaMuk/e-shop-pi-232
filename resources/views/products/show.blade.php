@@ -25,7 +25,8 @@
                 <img class="w-28 h-full aspect-1 mr-4" src="{{ Vite::asset($product->path_img) }}" alt="{{ $product->title }}">
                 <div>
                     <p>{{ $product->description }}</p>
-                    <p>{{ $product->price}}</p>
+                    <p>Цена: {{ $product->price}}</p>
+                    <p>Категория: {{ $product->category->title }}</p>
                 </div>
             </div>
         </div>
